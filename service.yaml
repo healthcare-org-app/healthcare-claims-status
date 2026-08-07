@@ -1,0 +1,13 @@
+name: claims-status-service
+port: 8805
+lang: python
+description: "claims-status-service \u2014 domain: claims"
+http_deps:
+- claims-submission-service
+- payer-edi-connect
+- audit-log-service
+publishes:
+- audit.event
+subscribes:
+- claim.submitted
+- claim.adjudicated
