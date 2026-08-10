@@ -1,7 +1,7 @@
 services:
   claims-status-service:
     build: .
-    container_name: ${NAME_UNDERSCORE}
+    container_name: claims_status_service
     depends_on:
       postgres:
         condition: service_healthy
